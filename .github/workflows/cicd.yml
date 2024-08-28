@@ -5,11 +5,11 @@ on:
     branches: [ "main" ]
 
 env:
-  AWS_REGION: ap-northeast-2                   # AWS region, e.g. us-west-1
-  ECR_REPOSITORY: user-repo                  # Amazon ECR repository name
-  ECS_SERVICE: user-service              # Amazon ECS service name
-  ECS_CLUSTER: allclear_cluster                 # Amazon ECS cluster name
-  CONTAINER_NAME: user-container           # set this to the name of the container in the containerDefinitions section of your task definition
+  AWS_REGION: ap-northeast-2
+  ECR_REPOSITORY: user-repo
+  ECS_SERVICE: user-service
+  ECS_CLUSTER: allclear_cluster
+  CONTAINER_NAME: user-container
 
 jobs:
   deploy:
@@ -30,20 +30,33 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: create application.yml
+      - name: Create application.yml
         if: contains(github.ref, 'main')
         run: |
           cd ./src/main
           mkdir -p resources 
           cd ./resources
           touch ./application.yml
-          ls *
           echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
         shell: bash
 
       - name: Build with Gradle
         run: ./gradlew build -x test
         shell: bash
+
+      - name: Save certificates to files
+        run: |
+          echo "${{ secrets.CERTIFICATE }}" > certificate.crt
+          echo "${{ secrets.CERTIFICATE_CHAIN }}" > certificate_chain.crt
+          echo "${{ secrets.PRIVATE_KEY }}" > private_key.key
+
+      - name: Combine certificates into a PEM file
+        run: |
+          cat certificate.crt certificate_chain.crt > fullchain.pem
+
+      - name: Add CA certificate to Java keystore
+        run: |
+          sudo keytool -import -noprompt -trustcacerts -alias exampleCA -file fullchain.pem -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
