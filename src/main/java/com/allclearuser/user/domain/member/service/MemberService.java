@@ -1,13 +1,13 @@
-package com.allclearuser.user.member.service;
+package com.allclearuser.user.domain.member.service;
 
 
-import com.allclearuser.user.member.converter.MemberConverter;
-import com.allclearuser.user.member.domain.dto.LoginDto;
-import com.allclearuser.user.member.domain.dto.SignupDto;
-import com.allclearuser.user.member.domain.dto.StudentDto;
-import com.allclearuser.user.member.domain.dto.TokenDto;
-import com.allclearuser.user.member.domain.entity.Student;
-import com.allclearuser.user.member.repository.MemberRepository;
+import com.allclearuser.user.domain.member.converter.MemberConverter;
+import com.allclearuser.user.domain.member.dto.LoginDto;
+import com.allclearuser.user.domain.member.dto.SignupDto;
+import com.allclearuser.user.domain.member.dto.StudentDto;
+import com.allclearuser.user.domain.member.dto.TokenDto;
+import com.allclearuser.user.domain.member.entity.Student;
+import com.allclearuser.user.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;

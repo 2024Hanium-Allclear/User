@@ -1,12 +1,10 @@
-package com.allclearuser.user.member.domain.entity;
+package com.allclearuser.user.domain.member.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Collection;
 
 @Entity
 @Getter
