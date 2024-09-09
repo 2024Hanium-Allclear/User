@@ -1,6 +1,6 @@
-package com.allclearuser.user.member.repository;
+package com.allclearuser.user.domain.member.repository;
 
-import com.allclearuser.user.member.domain.entity.Student;
+import com.allclearuser.user.domain.member.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

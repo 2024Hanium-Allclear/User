@@ -1,9 +1,9 @@
-package com.allclearuser.user.member.converter;
+package com.allclearuser.user.domain.member.converter;
 
 
-import com.allclearuser.user.member.domain.dto.SignupDto;
-import com.allclearuser.user.member.domain.dto.StudentDto;
-import com.allclearuser.user.member.domain.entity.Student;
+import com.allclearuser.user.domain.member.dto.SignupDto;
+import com.allclearuser.user.domain.member.dto.StudentDto;
+import com.allclearuser.user.domain.member.entity.Student;
 
 public class MemberConverter {
     public static Student toEntity(SignupDto.RequestDto requestDto, String encodedPw){

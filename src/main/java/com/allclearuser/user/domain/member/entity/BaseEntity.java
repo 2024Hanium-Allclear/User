@@ -1,4 +1,4 @@
-package com.allclearuser.user.member.domain.entity;
+package com.allclearuser.user.domain.member.entity;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;

@@ -1,10 +1,10 @@
-package com.allclearuser.user.member.controller;
+package com.allclearuser.user.domain.member.controller;
 
-import com.allclearuser.user.member.domain.dto.LoginDto;
-import com.allclearuser.user.member.domain.dto.SignupDto;
-import com.allclearuser.user.member.domain.dto.StudentDto;
-import com.allclearuser.user.member.domain.dto.TokenDto;
-import com.allclearuser.user.member.service.MemberService;
+import com.allclearuser.user.domain.member.dto.SignupDto;
+import com.allclearuser.user.domain.member.dto.LoginDto;
+import com.allclearuser.user.domain.member.dto.StudentDto;
+import com.allclearuser.user.domain.member.dto.TokenDto;
+import com.allclearuser.user.domain.member.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

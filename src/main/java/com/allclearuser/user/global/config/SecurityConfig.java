@@ -1,4 +1,4 @@
-package com.allclearuser.user.member.config;
+package com.allclearuser.user.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

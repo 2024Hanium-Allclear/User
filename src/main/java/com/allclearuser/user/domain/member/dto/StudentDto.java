@@ -1,6 +1,5 @@
-package com.allclearuser.user.member.domain.dto;
+package com.allclearuser.user.domain.member.dto;
 
-import com.allclearuser.user.member.domain.entity.Student;
 import lombok.Builder;
 import lombok.Getter;
 
