@@ -1,14 +1,13 @@
-package com.allclearuser.user.domain.member.dto;
+package com.allclearuser.user.domain.member.dto.request;
 
 import lombok.Builder;
 import lombok.Getter;
 
-@Builder
-@Getter
-public class SignupDto {
+public class SignupRequestDTO {
+
     @Builder
     @Getter
-    public static class RequestDto{
+    public static class CreateMemberDTO{
         private String loginId;
         private String password;
         private String studentIdNumber;

@@ -1,5 +1,6 @@
 package com.allclearuser.user.domain.member.entity;
 
+import com.allclearuser.user.global.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "student", schema = "member")
+@Table(name = "student")
 public class Student extends BaseEntity {
 
     @Id
