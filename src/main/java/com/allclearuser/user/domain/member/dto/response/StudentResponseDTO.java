@@ -8,7 +8,7 @@ import lombok.Getter;
 public class StudentResponseDTO {
     @Getter
     @Builder
-    public class GetStudentDTO {
+    public static class GetStudentDTO {
         private Long id;
     }
 }

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "student", schema = "member")
+@Table(name = "student")
 public class Student extends BaseEntity {
 
     @Id
