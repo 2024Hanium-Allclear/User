@@ -1,5 +1,6 @@
 package com.allclearuser.user.domain.member.entity;
 
+import com.allclearuser.user.global.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
