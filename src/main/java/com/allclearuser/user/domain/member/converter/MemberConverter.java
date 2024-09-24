@@ -17,7 +17,19 @@ public class MemberConverter {
     public static StudentResponseDTO.GetStudentDTO from(Student student) {
 
         return StudentResponseDTO.GetStudentDTO.builder()
-                .id(student.getId()).build();
+                .studentId(student.getId())
+                .grade(student.getGrade())
+                .studentIdNumber(student.getStudentIdNumber())
+                .build();
+    }
+
+    public static StudentResponseDTO.GetProfileDTO fromEntity(Student student) {
+
+        return StudentResponseDTO.GetProfileDTO.builder()
+                .studentId(student.getId())
+                .grade(student.getGrade())
+                .studentIdNumber(student.getStudentIdNumber())
+                .build();
     }
 
 }

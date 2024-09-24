@@ -5,16 +5,15 @@ import com.allclearuser.user.global.apiPayload.code.GeneralErrorCode;
 import com.allclearuser.user.global.apiPayload.code.status.BaseErrorCode;
 import com.allclearuser.user.global.apiPayload.exception.GeneralException;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@RequestMapping("/api/users")
 @RestController
 public class TestController {
 
     @GetMapping("/health")
-    public ResponseEntity<String> healthCheck(){
-        return ResponseEntity.ok("user-health");
+    public ResponseEntity<String> healthCheck(@RequestHeader("studentId") String studentId){
+        return ResponseEntity.ok(studentId);
     }
 
     @GetMapping("/test1")

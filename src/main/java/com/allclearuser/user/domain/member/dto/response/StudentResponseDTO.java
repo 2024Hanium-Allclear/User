@@ -9,6 +9,17 @@ public class StudentResponseDTO {
     @Getter
     @Builder
     public static class GetStudentDTO {
-        private Long id;
+        private Long studentId;
+        private String studentIdNumber;
+        private int grade;
+    }
+
+    @Getter
+    @Builder
+    public class GetProfileDTO {
+        private Long studentId;
+        private String studentIdNumber;
+        private int grade;
+
     }
 }
