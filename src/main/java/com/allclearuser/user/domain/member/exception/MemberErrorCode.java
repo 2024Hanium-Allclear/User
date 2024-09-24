@@ -15,8 +15,9 @@ public enum MemberErrorCode implements BaseErrorCode {
     MEMBER_NOT_FOUND(HttpStatus.NOT_FOUND,
             "MEMBER404", "해당 id 사용자를 찾을 수 없습니다."),
     MEMBER_PASSWORD(HttpStatus.NOT_FOUND,"MEMBER405", "비밀번호가 일치하지 않습니다."),
-    MEMBER_ALREADY_EXIST(HttpStatus.FOUND, "MEMBER406", "사용할 수 없는 id 입니다.")
-    ;
+    MEMBER_ALREADY_EXIST(HttpStatus.FOUND, "MEMBER406", "사용할 수 없는 id 입니다."),
+    REFRESH_TOKEN_UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "MEMBER407", "토큰값이 일치하지 않습니다."),
+    TOKEN_EMPTY(HttpStatus.UNAUTHORIZED, "MEMBER408", "토큰값이 비어있습니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
